@@ -1,0 +1,139 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страница</title>
+</head>
+<header>
+    <div class="logo">
+        <a href="/">
+            <img src="../static/polls/img/logo-xing-svgrepo-com.svg" width="60" height="60px"/>
+        </a>
+
+    </div>
+    <div class="menu">
+        <ul>
+            <li><a href="/about">Обо мне</a></li>
+            <li><a href="/aboutWork">Чем занимаюсь</a></li>
+            <li><a href="/aboutStudy">Моё обучение</a></li>
+            <li><a href="/aboutExperience">Опыт работы</a></li>
+
+        </ul>
+
+    </div>
+    <div class="tel">
+        <a href="tel:89603645697">+7 (960) 364 56 97</a>
+
+    </div>
+</header>
+<body>
+{% block body %}
+{% endblock %}
+</body>
+<footer>
+</footer>
+</html>
+
+<style>
+
+    header {
+        background-color: white;
+    }
+
+    body {
+        background-color: burlywood;
+        height: 100%;
+        width: 100%;
+        min-height: calc(100vh - 70px);
+    }
+
+    header {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .menu {
+        flex-grow: 1;
+    }
+
+    .menu ul {
+        display: flex;
+        flex-flow: row nowrap;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .menu {
+        display: flex;
+        flex-flow: row nowrap;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .menu li {
+        margin-right: 20px;
+    }
+
+    .menu li:last-child {
+        margin-right: 0;
+    }
+
+    .menu a {
+        padding: 8px 10px;
+    }
+
+    .logo {
+        margin-right: 30px;
+    }
+
+    .menu a,
+    .menu .active {
+        display: block;
+        padding: 8px 10px;
+    }
+
+    .menu .active {
+        color: black;
+        background-color: burlywood;
+        border-radius: 8px;
+    }
+
+    .menu ul {
+        display: flex;
+        flex-flow: row nowrap;
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+        line-height: 18px;
+        list-style: none;
+    }
+
+    .menu a,
+    .menu .active {
+        display: block;
+        padding: 8px 10px;
+        text-transform: uppercase;
+        letter-spacing: .27em;
+    }
+
+    .menu a {
+        color: black;
+        text-decoration: none;
+    }
+
+    .tel {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .tel a {
+        color: black;
+        text-decoration: burlywood;
+    }
+
+
